@@ -17,5 +17,11 @@ pipeline {
                 sh 'docker build -t ubuntu:v1.0.0 .'
             }
         }
+		stage('Creating Container') {
+            steps {
+                sh 'docker run -dt --name shivakc ubuntu:v1.0.0 /bin/bash '
+            }
+        }
     }
+	
 }
