@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Docker') {
             steps {
-                sh 'docker build -t git .'
+                sh 'docker build -t ubuntu:v1.0.0 .'
             }
         }
     }
